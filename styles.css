@@ -1,0 +1,39 @@
+* {
+	box-sizing: border-box;
+}
+body {
+    background-color: #EEEEEE;
+}
+header {
+    position: sticky;
+    left: 0;
+    right: 0;
+    height: 92px;
+    background-color: #CF2B2B;
+}
+header h1 {
+    font-family: 'Righteous', cursive;
+    font-size: 44px;
+    font-weight: 400;
+    margin-left: 21px;
+    padding-top: 8px;
+    color: white;
+}
+header nav {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    margin-left: 21px;
+    color: white;
+}
+.titulo-secao {
+    font-family: 'Righteous', cursive;
+    font-style: normal;
+    font-size: 26px;
+    font-weight: 400;
+    margin: 31px 0 17px 19px;
+    color: black;
+}
+.pratos {
+    height: 216px;
+}
