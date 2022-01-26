@@ -6,6 +6,7 @@ body {
 }
 header {
     position: sticky;
+    top: 0;
     left: 0;
     right: 0;
     height: 92px;
@@ -37,13 +38,15 @@ header nav {
 .pratos {
     height: 216px;
     margin-left: 19px;
-    background-color: brown;
+    display: flex;
+    overflow-x: hidden;
 }
 .prato {
     width: 172px;
     height: 100%;
     padding: 14px;
     border-radius: 9px;
+    margin-right: 16px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -71,8 +74,90 @@ header nav {
     height: 87px;
     border-radius: 4px;
 }
+
+.bebidas {
+    height: 216px;
+    margin-left: 19px;
+    display: flex;
+    overflow-x: hidden;
+}
+.bebida {
+    width: 172px;
+    height: 100%;
+    padding: 14px;
+    border-radius: 9px;
+    margin-right: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: white;
+}
+.bebida__nome {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: #333333;
+}
+.bebida__descricao {
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    color: #A6A6A6;
+}
+.bebida__preco {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+}
+.bebida img {
+    width: 144px;
+    height: 87px;
+    border-radius: 4px;
+}
+
+.sobremesas {
+    height: 216px;
+    margin-left: 19px;
+    margin-bottom: 16px;
+    display: flex;
+    overflow-x: hidden;
+}
+.sobremesa {
+    width: 172px;
+    height: 100%;
+    padding: 14px;
+    border-radius: 9px;
+    margin-right: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: white;
+}
+.sobremesa__nome {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: #333333;
+}
+.sobremesa__descricao {
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    color: #A6A6A6;
+}
+.sobremesa__preco {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+}
+.sobremesa img {
+    width: 144px;
+    height: 87px;
+    border-radius: 4px;
+}
+
 footer {
-    position: fixed;
+    position: sticky;
     bottom: 0;
     left: 0;
     right: 0;
