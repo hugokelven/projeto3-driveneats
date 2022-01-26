@@ -110,9 +110,10 @@ header nav {
     font-weight: 400;
 }
 .bebida img {
-    width: 144px;
+    width: 87px;
     height: 87px;
     border-radius: 4px;
+    margin: 0 auto;
 }
 
 .sobremesas {
