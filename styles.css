@@ -36,6 +36,40 @@ header nav {
 }
 .pratos {
     height: 216px;
+    margin-left: 19px;
+    background-color: brown;
+}
+.prato {
+    width: 172px;
+    height: 100%;
+    padding: 14px;
+    border-radius: 9px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: white;
+}
+.prato__nome {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: #333333;
+}
+.prato__descricao {
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    color: #A6A6A6;
+}
+.prato__preco {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+}
+.prato img {
+    width: 144px;
+    height: 87px;
+    border-radius: 4px;
 }
 footer {
     position: fixed;
