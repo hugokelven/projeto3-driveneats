@@ -35,13 +35,13 @@ header nav {
     margin: 31px 0 17px 19px;
     color: black;
 }
-.pratos {
+.categoria {
     height: 216px;
     margin-left: 19px;
     display: flex;
     overflow-x: hidden;
 }
-.prato {
+.item-do-menu {
     width: 172px;
     height: 100%;
     padding: 14px;
@@ -52,37 +52,31 @@ header nav {
     justify-content: space-between;
     background-color: white;
 }
-.prato__nome {
+.item-do-menu__nome {
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     font-weight: 700;
     color: #333333;
 }
-.prato__descricao {
+.item-do-menu__descricao {
     font-family: 'Roboto', sans-serif;
     font-size: 15px;
     font-weight: 300;
     color: #A6A6A6;
 }
-.prato__preco {
+.item-do-menu__preco {
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     font-weight: 400;
 }
-.prato img {
+.item-do-menu img {
     width: 144px;
     height: 87px;
     border-radius: 4px;
 }
 
-.bebidas {
-    height: 216px;
-    margin-left: 19px;
-    display: flex;
-    overflow-x: hidden;
-}
-.bebida {
-    width: 172px;
+.bebida__correcoes {
+    min-width: 172px;
     height: 100%;
     padding: 14px;
     border-radius: 9px;
@@ -92,69 +86,17 @@ header nav {
     justify-content: space-between;
     background-color: white;
 }
-.bebida__nome {
-    font-family: 'Roboto', sans-serif;
-    font-size: 16px;
-    font-weight: 700;
-    color: #333333;
-}
-.bebida__descricao {
-    font-family: 'Roboto', sans-serif;
-    font-size: 15px;
-    font-weight: 300;
-    color: #A6A6A6;
-}
-.bebida__preco {
-    font-family: 'Roboto', sans-serif;
-    font-size: 16px;
-    font-weight: 400;
-}
-.bebida img {
+
+.bebida__correcoes img {
     width: 87px;
     height: 87px;
     border-radius: 4px;
     margin: 0 auto;
 }
 
-.sobremesas {
-    height: 216px;
-    margin-left: 19px;
-    margin-bottom: 16px;
-    display: flex;
-    overflow-x: hidden;
-}
-.sobremesa {
-    width: 172px;
-    height: 100%;
-    padding: 14px;
-    border-radius: 9px;
-    margin-right: 16px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    background-color: white;
-}
-.sobremesa__nome {
-    font-family: 'Roboto', sans-serif;
-    font-size: 16px;
-    font-weight: 700;
-    color: #333333;
-}
-.sobremesa__descricao {
-    font-family: 'Roboto', sans-serif;
-    font-size: 15px;
-    font-weight: 300;
-    color: #A6A6A6;
-}
-.sobremesa__preco {
-    font-family: 'Roboto', sans-serif;
-    font-size: 16px;
-    font-weight: 400;
-}
-.sobremesa img {
-    width: 144px;
-    height: 87px;
-    border-radius: 4px;
+.selecionado {
+    border: 5px solid #32B72F;
+    padding: calc(14px - 5px);
 }
 
 footer {
