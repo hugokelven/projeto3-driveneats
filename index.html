@@ -14,31 +14,32 @@
         <h1>DrivenEats</h1>
         <nav>Sua comida em 6 minutos</nav>
     </header>
+
+    <!-- Pratos -->
     <nav class="titulo-secao">Primeiro, seu prato</nav>
-    
-    <div class="categoria">
-        <article class="item-do-menu" onclick="selecionarPrato1()">
+    <div class="categoria pratos">
+        <article class="item-do-menu prato1" onclick="selecionarPrato('prato1')">
             <img src="imgs/pratos/strogonoff-frango.jpg" alt="strogonoff de frango">
             <nav class="item-do-menu__nome">Strogonoff de Frango</nav>
             <nav class="item-do-menu__descricao">Arroz <br>
             Batata palha</nav>
             <nav class="item-do-menu__preco">R$ 14,90</nav>
         </article>
-        <article class="item-do-menu" onclick="selecionarPrato2()">
+        <article class="item-do-menu prato2" onclick="selecionarPrato('prato2')">
             <img src="imgs/pratos/espaguete-bolonhesa.jpeg" alt="espaguete à bolonhesa">
             <nav class="item-do-menu__nome">Espaguete à Bolonhesa</nav>
             <nav class="item-do-menu__descricao"> <br>
             </nav>
             <nav class="item-do-menu__preco">R$ 12,90</nav>
         </article>
-        <article class="item-do-menu" onclick="selecionarPrato3()">
+        <article class="item-do-menu prato3" onclick="selecionarPrato('prato3')">
             <img src="imgs/pratos/file-peixe-empanado.jpg" alt="filé de peixe empanado">
             <nav class="item-do-menu__nome">Filé de Peixe Empanado</nav>
             <nav class="item-do-menu__descricao">Arroz <br>
             Salada</nav>
             <nav class="item-do-menu__preco">R$ 15,90</nav>
         </article>
-        <article class="item-do-menu" onclick="selecionarPrato4()">
+        <article class="item-do-menu prato4" onclick="selecionarPrato('prato3')">
             <img src="imgs/pratos/cuscuz-marroquino-com-pinhao.jpeg" alt="cuscuz marroquino com pinhão">
             <nav class="item-do-menu__nome">Cuscuz Marroquino com Pinhão</nav>
             <nav class="item-do-menu__descricao">Vegano <br>
@@ -47,30 +48,31 @@
         </article>
     </div>
 
+    <!-- Bebidas -->
     <nav class="titulo-secao">Agora, sua bebida</nav>
-    <div class="categoria">
-        <article class="item-do-menu bebida__correcoes" onclick="selecionarBebida1()">
+    <div class="categoria bebidas">
+        <article class="item-do-menu bebida1 bebida__correcoes" onclick="selecionarBebida('bebida1')">
             <img src="imgs/bebidas/coca-cola.png" alt="coca-cola lata">
             <nav class="item-do-menu__nome">Coca-cola</nav>
             <nav class="item-do-menu__descricao">473 ml <br>
             </nav>
             <nav class="item-do-menu__preco">R$ 5,00</nav>
         </article>
-        <article class="item-do-menu bebida__correcoes" onclick="selecionarBebida2()">
+        <article class="item-do-menu bebida2 bebida__correcoes" onclick="selecionarBebida('bebida2')">
             <img src="imgs/bebidas/suco-uva.png" alt="suco de uva">
             <nav class="item-do-menu__nome">Suco de Uva Valle</nav>
             <nav class="item-do-menu__descricao">290 ml <br>
             </nav>
             <nav class="item-do-menu__preco">R$ 3,50</nav>
         </article>
-        <article class="item-do-menu bebida__correcoes" onclick="selecionarBebida3()">
+        <article class="item-do-menu bebida3 bebida__correcoes" onclick="selecionarBebida('bebida3')">
             <img src="imgs/bebidas/heineken.jpg" alt="heineken">
             <nav class="item-do-menu__nome">Heineken</nav>
             <nav class="item-do-menu__descricao">600 ml <br>
             </nav>
             <nav class="item-do-menu__preco">R$ 10,00</nav>
         </article>
-        <article class="item-do-menu bebida__correcoes" onclick="selecionarBebida4()">
+        <article class="item-do-menu bebida4 bebida__correcoes" onclick="selecionarBebida('bebida4')">
             <img src="imgs/bebidas/h2oh.jpg" alt="h2oh">
             <nav class="item-do-menu__nome">H2OH</nav>
             <nav class="item-do-menu__descricao">500 ml <br>
@@ -79,30 +81,31 @@
         </article>
     </div>
 
+    <!-- Sobremesas -->
     <nav class="titulo-secao">Por fim, sua sobremesa</nav>
-    <div class="categoria">
-        <article class="item-do-menu" onclick="selecionarSobremesa1()">
+    <div class="categoria sobremesas sobremesa__margem-inferior">
+        <article class="item-do-menu sobremesa1" onclick="selecionarSobremesa('sobremesa1')">
             <img src="imgs/sobremesas/bolo-prestigio.jpg" alt="bolo prestígio">
             <nav class="item-do-menu__nome">Bolo Prestígio</nav>
             <nav class="item-do-menu__descricao"> <br>
             </nav>
             <nav class="item-do-menu__preco">R$ 4,60</nav>
         </article>
-        <article class="item-do-menu" onclick="selecionarSobremesa2()">
+        <article class="item-do-menu sobremesa2" onclick="selecionarSobremesa('sobremesa2')">
             <img src="imgs/sobremesas/pudim.jpg" alt="pudim">
             <nav class="item-do-menu__nome">Pudim</nav>
             <nav class="item-do-menu__descricao"> <br>
             </nav>
             <nav class="item-do-menu__preco">R$ 3,90</nav>
         </article>
-        <article class="item-do-menu" onclick="selecionarSobremesa3()">
+        <article class="item-do-menu sobremesa3" onclick="selecionarSobremesa('sobremesa3')">
             <img src="imgs/sobremesas/torta-mousse-maracuja.jpg" alt="torta mousse de maracujá">
             <nav class="item-do-menu__nome">Torta Mousse de Maracujá</nav>
             <nav class="item-do-menu__descricao"> <br>
             </nav>
             <nav class="item-do-menu__preco">R$ 5,00</nav>
         </article>
-        <article class="item-do-menu" onclick="selecionarSobremesa4()">
+        <article class="item-do-menu sobremesa4" onclick="selecionarSobremesa('sobremesa4')">
             <img src="imgs/sobremesas/sorvete-de-chocolate.jpeg" alt="sorvete de chocolate">
             <nav class="item-do-menu__nome">Sorvete de Chocolate</nav>
             <nav class="item-do-menu__descricao"> <br>
@@ -111,6 +114,7 @@
         </article>
     </div>
 
+    <!-- Barra Inferior -->
     <footer>
         <button class="fechar-pedido"><p>Selecione os 3 itens para fechar o pedido</p></button>
     </footer>

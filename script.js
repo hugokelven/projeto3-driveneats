@@ -1,118 +1,88 @@
-let categorias = document.querySelectorAll(".categoria")
+const categorias = document.querySelectorAll(".categoria")
 
-let pratos = categorias[0].querySelectorAll(".item-do-menu")
+// Selecionar o prato
+function selecionarPrato(a) {
+    const pratos = categorias[0]
 
-let bebidas = categorias[1].querySelectorAll(".item-do-menu")
-
-let sobremesas = categorias[2].querySelectorAll(".item-do-menu")
-
-function selecionarPrato1(){
-    for (let i = 0; i < pratos.length; i++) {
-        if (i != 0) {
-            pratos[i].classList.remove("selecionado")
-        } else {
-            pratos[i].classList.add("selecionado")
-        }
+    const pratoSelecionado = pratos.querySelector(".selecionado")
+    if (pratoSelecionado !== null) {
+        pratoSelecionado.classList.remove("selecionado")
     }
-}
-function selecionarPrato2(){
-    for (let i = 0; i < pratos.length; i++) {
-        if (i != 1) {
-            pratos[i].classList.remove("selecionado")
-        } else {
-            pratos[i].classList.add("selecionado")
-        }
-    }
-}
-function selecionarPrato3(){
-    for (let i = 0; i < pratos.length; i++) {
-        if (i != 2) {
-            pratos[i].classList.remove("selecionado")
-        } else {
-            pratos[i].classList.add("selecionado")
-        }
-    }
-}
-function selecionarPrato4(){
-    for (let i = 0; i < pratos.length; i++) {
-        if (i != 3) {
-            pratos[i].classList.remove("selecionado")
-        } else {
-            pratos[i].classList.add("selecionado")
-        }
-    }
+    const item = document.querySelector("." + a)
+    item.classList.add("selecionado")
 }
 
-function selecionarBebida1(){
-    for (let i = 0; i < pratos.length; i++) {
-        if (i != 0) {
-            bebidas[i].classList.remove("selecionado")
-        } else {
-            bebidas[i].classList.add("selecionado")
-        }
+// Selecionar a bebida
+function selecionarBebida(a) {
+    const bebidas = categorias[1]
+
+    const bebidaSelecionada = bebidas.querySelector(".selecionado")
+    if (bebidaSelecionada !== null) {
+        bebidaSelecionada.classList.remove("selecionado")
     }
-}
-function selecionarBebida2(){
-    for (let i = 0; i < pratos.length; i++) {
-        if (i != 1) {
-            bebidas[i].classList.remove("selecionado")
-        } else {
-            bebidas[i].classList.add("selecionado")
-        }
-    }
-}
-function selecionarBebida3(){
-    for (let i = 0; i < pratos.length; i++) {
-        if (i != 2) {
-            bebidas[i].classList.remove("selecionado")
-        } else {
-            bebidas[i].classList.add("selecionado")
-        }
-    }
-}
-function selecionarBebida4(){
-    for (let i = 0; i < pratos.length; i++) {
-        if (i != 3) {
-            bebidas[i].classList.remove("selecionado")
-        } else {
-            bebidas[i].classList.add("selecionado")
-        }
-    }
+    const item = document.querySelector("." + a)
+    item.classList.add("selecionado")
 }
 
-function selecionarSobremesa1(){
-    for (let i = 0; i < pratos.length; i++) {
-        if (i != 0) {
-            sobremesas[i].classList.remove("selecionado")
-        } else {
-            sobremesas[i].classList.add("selecionado")
-        }
+// Selecionar a sobremesa
+function selecionarSobremesa(a) {
+    const sobremesas = categorias[2]
+
+    const sobremesaSelecionada = sobremesas.querySelector(".selecionado")
+    if (sobremesaSelecionada !== null) {
+        sobremesaSelecionada.classList.remove("selecionado")
     }
+    const item = document.querySelector("." + a)
+    item.classList.add("selecionado")
 }
-function selecionarSobremesa2(){
-    for (let i = 0; i < pratos.length; i++) {
-        if (i != 1) {
-            sobremesas[i].classList.remove("selecionado")
-        } else {
-            sobremesas[i].classList.add("selecionado")
-        }
-    }
+
+let itensSelecionados = document.querySelectorAll(".selecionado")
+
+if (itensSelecionados.length === 3) {
+    const botao = document.querySelector(".fechar-pedido")
+    botao.innerHTML = "<p>Fechar Pedido</p>"
+    botao.classList.remove("fechar-pedido")
+    botao.classList.add("fechar-pedido-acionado")
 }
-function selecionarSobremesa3(){
-    for (let i = 0; i < pratos.length; i++) {
-        if (i != 2) {
-            sobremesas[i].classList.remove("selecionado")
-        } else {
-            sobremesas[i].classList.add("selecionado")
-        }
-    }
-}
-function selecionarSobremesa4(){
-    for (let i = 0; i < pratos.length; i++) {
-        if (i != 3) {
-            sobremesas[i].classList.remove("selecionado")
-        } else {
-            sobremesas[i].classList.add("selecionado")
-        }
-    }
-}
+
+
+
+
+
+
+
+
+
+
+/* Codigo que nao deu certo
+
+const categorias = document.querySelectorAll(".categoria")
+
+const pratos = categorias[0].querySelectorAll(".item-do-menu")
+const bebidas = categorias[1].querySelectorAll(".item-do-menu")
+const sobremesas = categorias[2].querySelectorAll(".item-do-menu")
+
+// Selecionar Prato
+pratos.forEach(prato => prato.addEventListener("click", function teste (){
+    pratos.forEach(prato => {prato.classList.remove("selecionado")})
+    prato.classList.add("selecionado")})
+)
+
+// Selecionar Bebida
+bebidas.forEach(bebida => bebida.addEventListener("click", function (){
+    bebidas.forEach(bebida => {bebida.classList.remove("selecionado")})
+    bebida.classList.add("selecionado")})
+)
+
+// Selecionar Sobremesa
+sobremesas.forEach(sobremesa => sobremesa.addEventListener("click", function (){
+    sobremesas.forEach(sobremesa => {sobremesa.classList.remove("selecionado")})
+    sobremesa.classList.add("selecionado")})
+)
+
+if () {
+    const botao = document.querySelector(".fechar-pedido")
+    botao.innerHTML = "<p>Fechar Pedido</p>"
+    botao.classList.remove("fechar-pedido")
+    botao.classList.add("fechar-pedido-acionado")
+} */
