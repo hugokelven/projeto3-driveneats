@@ -6,11 +6,13 @@ body {
 }
 header {
     position: sticky;
+    z-index: 1;
     top: 0;
     left: 0;
     right: 0;
     height: 92px;
     background-color: #CF2B2B;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 header h1 {
     font-family: 'Righteous', cursive;
@@ -39,9 +41,10 @@ header nav {
     height: 216px;
     margin-left: 19px;
     display: flex;
-    overflow-x: hidden;
+    overflow-x: scroll;
 }
 .item-do-menu {
+    position: relative;
     width: 172px;
     height: 100%;
     padding: 14px;
@@ -52,6 +55,13 @@ header nav {
     justify-content: space-between;
     background-color: white;
 }
+
+.item-do-menu img {
+    width: 144px;
+    height: 87px;
+    border-radius: 4px;
+}
+
 .item-do-menu__nome {
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
@@ -69,13 +79,18 @@ header nav {
     font-size: 16px;
     font-weight: 400;
 }
-.item-do-menu img {
-    width: 144px;
-    height: 87px;
-    border-radius: 4px;
+
+.item-do-menu__icone {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+.ocultar-icone {
+    display: none;
 }
 
 .bebida__correcoes {
+    position: relative;
     min-width: 172px;
     height: 100%;
     padding: 14px;
@@ -101,6 +116,10 @@ header nav {
 .selecionado {
     border: 5px solid #32B72F;
     padding: calc(14px - 5px);
+    background-image: url("confirmado.svg");
+    background-repeat: no-repeat;
+    background-position-x: 138px;
+    background-position-y: 166px;
 }
 
 footer {
@@ -112,7 +131,7 @@ footer {
     height: 92px;
     background-color: white;
 }
-.fechar-pedido {
+.selecione-os-pedidos {
     position: absolute;
     top: 15px;
     left: calc(50% - (364px/2));
@@ -121,6 +140,26 @@ footer {
     border: none;
     border-radius: 61px;
     background-color: #CBCBCB;
+}
+.selecione-os-pedidos p {
+    font-family: 'Roboto', sans-serif;
+    width: 200px;
+    font-size: 20px;
+    font-weight: 400;
+    margin: 0 auto;
+    color: white;
+}
+
+.fechar-pedido {
+    position: absolute;
+    z-index: 1;
+    top: 15px;
+    left: calc(50% - (364px/2));
+    width: 364px;
+    height: 61px;
+    border: none;
+    border-radius: 61px;
+    background-color: #32B72F;
 }
 .fechar-pedido p {
     font-family: 'Roboto', sans-serif;
@@ -131,21 +170,12 @@ footer {
     color: white;
 }
 
-.fechar-pedido-acionado {
-    position: absolute;
-    top: 15px;
-    left: calc(50% - (364px/2));
-    width: 364px;
-    height: 61px;
-    border: none;
-    border-radius: 61px;
-    background-color: #32B72F;
+.ocultar1 {
+    display: none;
 }
-.fechar-pedido-acionado p {
-    font-family: 'Roboto', sans-serif;
-    width: 200px;
-    font-size: 20px;
-    font-weight: 400;
-    margin: 0 auto;
-    color: white;
+.ocultar2 {
+    display: none;
+}
+.ocultar3 {
+    display: none;
 }

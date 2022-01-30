@@ -10,6 +10,9 @@ function selecionarPrato(a) {
     }
     const item = document.querySelector("." + a)
     item.classList.add("selecionado")
+
+    const ocultar1 = document.querySelector(".ocultar1")
+    ocultar1.classList.remove("ocultar1")
 }
 
 // Selecionar a bebida
@@ -22,6 +25,9 @@ function selecionarBebida(a) {
     }
     const item = document.querySelector("." + a)
     item.classList.add("selecionado")
+
+    const ocultar2 = document.querySelector(".ocultar2")
+    ocultar2.classList.remove("ocultar2")
 }
 
 // Selecionar a sobremesa
@@ -34,15 +40,19 @@ function selecionarSobremesa(a) {
     }
     const item = document.querySelector("." + a)
     item.classList.add("selecionado")
+
+    const ocultar3 = document.querySelector(".ocultar3")
+    ocultar3.classList.remove("ocultar3")
 }
 
-let itensSelecionados = document.querySelectorAll(".selecionado")
+function codificarTexto(texto) {
+    let textoCodificado = encodeURIComponent(texto)
+    return textoCodificado
+}
 
-if (itensSelecionados.length === 3) {
-    const botao = document.querySelector(".fechar-pedido")
-    botao.innerHTML = "<p>Fechar Pedido</p>"
-    botao.classList.remove("fechar-pedido")
-    botao.classList.add("fechar-pedido-acionado")
+function mandarMensagem(mensagem) {
+    const numeroDeCelular = "5581979016264"
+    window.open("https://wa.me/" + numeroDeCelular + "?text=" + codificarTexto("teste"))
 }
 
 

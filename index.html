@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="reset.css">
     <link href="https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    <title>Document</title>
+    <title>DrivenEats</title>
 </head>
 <body>
     <header>
@@ -17,106 +17,107 @@
 
     <!-- Pratos -->
     <nav class="titulo-secao">Primeiro, seu prato</nav>
-    <div class="categoria pratos">
-        <article class="item-do-menu prato1" onclick="selecionarPrato('prato1')">
+    <div data-identifier="dishes" class="categoria pratos">
+        <article data-identifier="food-option" class="item-do-menu prato1" onclick="selecionarPrato('prato1')">
             <img src="imgs/pratos/strogonoff-frango.jpg" alt="strogonoff de frango">
-            <nav class="item-do-menu__nome">Strogonoff de Frango</nav>
+            <nav data-identifier="food-title" class="item-do-menu__nome">Strogonoff de Frango</nav>
             <nav class="item-do-menu__descricao">Arroz <br>
             Batata palha</nav>
-            <nav class="item-do-menu__preco">R$ 14,90</nav>
+            <nav data-identifier="food-price" class="item-do-menu__preco">R$ 14,90</nav>
         </article>
-        <article class="item-do-menu prato2" onclick="selecionarPrato('prato2')">
+        <article data-identifier="food-option" class="item-do-menu prato2" onclick="selecionarPrato('prato2')">
             <img src="imgs/pratos/espaguete-bolonhesa.jpeg" alt="espaguete à bolonhesa">
-            <nav class="item-do-menu__nome">Espaguete à Bolonhesa</nav>
+            <nav data-identifier="food-title" class="item-do-menu__nome">Espaguete à Bolonhesa</nav>
             <nav class="item-do-menu__descricao"> <br>
             </nav>
-            <nav class="item-do-menu__preco">R$ 12,90</nav>
+            <nav data-identifier="food-price" class="item-do-menu__preco">R$ 12,90</nav>
         </article>
-        <article class="item-do-menu prato3" onclick="selecionarPrato('prato3')">
+        <article data-identifier="food-option" class="item-do-menu prato3" onclick="selecionarPrato('prato3')">
             <img src="imgs/pratos/file-peixe-empanado.jpg" alt="filé de peixe empanado">
-            <nav class="item-do-menu__nome">Filé de Peixe Empanado</nav>
+            <nav data-identifier="food-title" class="item-do-menu__nome">Filé de Peixe Empanado</nav>
             <nav class="item-do-menu__descricao">Arroz <br>
             Salada</nav>
-            <nav class="item-do-menu__preco">R$ 15,90</nav>
+            <nav data-identifier="food-price" class="item-do-menu__preco">R$ 15,90</nav>
         </article>
-        <article class="item-do-menu prato4" onclick="selecionarPrato('prato3')">
+        <article data-identifier="food-option" class="item-do-menu prato4" onclick="selecionarPrato('prato4')">
             <img src="imgs/pratos/cuscuz-marroquino-com-pinhao.jpeg" alt="cuscuz marroquino com pinhão">
-            <nav class="item-do-menu__nome">Cuscuz Marroquino com Pinhão</nav>
+            <nav data-identifier="food-title" class="item-do-menu__nome">Cuscuz Marroquino com Pinhão</nav>
             <nav class="item-do-menu__descricao">Vegano <br>
             </nav>
-            <nav class="item-do-menu__preco">R$ 13,90</nav>
+            <nav data-identifier="food-price" class="item-do-menu__preco">R$ 13,90</nav>
         </article>
     </div>
 
     <!-- Bebidas -->
     <nav class="titulo-secao">Agora, sua bebida</nav>
-    <div class="categoria bebidas">
-        <article class="item-do-menu bebida1 bebida__correcoes" onclick="selecionarBebida('bebida1')">
+    <div data-identifier="drinks" class="categoria bebidas">
+        <article data-identifier="food-option" class="item-do-menu bebida1 bebida__correcoes" onclick="selecionarBebida('bebida1')">
             <img src="imgs/bebidas/coca-cola.png" alt="coca-cola lata">
-            <nav class="item-do-menu__nome">Coca-cola</nav>
+            <nav data-identifier="food-title" class="item-do-menu__nome">Coca-cola</nav>
             <nav class="item-do-menu__descricao">473 ml <br>
             </nav>
-            <nav class="item-do-menu__preco">R$ 5,00</nav>
+            <nav data-identifier="food-price" class="item-do-menu__preco">R$ 5,00</nav>
         </article>
-        <article class="item-do-menu bebida2 bebida__correcoes" onclick="selecionarBebida('bebida2')">
+        <article data-identifier="food-option" class="item-do-menu bebida2 bebida__correcoes" onclick="selecionarBebida('bebida2')">
             <img src="imgs/bebidas/suco-uva.png" alt="suco de uva">
-            <nav class="item-do-menu__nome">Suco de Uva Valle</nav>
+            <nav data-identifier="food-title" class="item-do-menu__nome">Suco de Uva Valle</nav>
             <nav class="item-do-menu__descricao">290 ml <br>
             </nav>
-            <nav class="item-do-menu__preco">R$ 3,50</nav>
+            <nav data-identifier="food-price" class="item-do-menu__preco">R$ 3,50</nav>
         </article>
-        <article class="item-do-menu bebida3 bebida__correcoes" onclick="selecionarBebida('bebida3')">
+        <article data-identifier="food-option" class="item-do-menu bebida3 bebida__correcoes" onclick="selecionarBebida('bebida3')">
             <img src="imgs/bebidas/heineken.jpg" alt="heineken">
-            <nav class="item-do-menu__nome">Heineken</nav>
+            <nav data-identifier="food-title" class="item-do-menu__nome">Heineken</nav>
             <nav class="item-do-menu__descricao">600 ml <br>
             </nav>
-            <nav class="item-do-menu__preco">R$ 10,00</nav>
+            <nav data-identifier="food-price" class="item-do-menu__preco">R$ 10,00</nav>
         </article>
-        <article class="item-do-menu bebida4 bebida__correcoes" onclick="selecionarBebida('bebida4')">
+        <article data-identifier="food-option" class="item-do-menu bebida4 bebida__correcoes" onclick="selecionarBebida('bebida4')">
             <img src="imgs/bebidas/h2oh.jpg" alt="h2oh">
-            <nav class="item-do-menu__nome">H2OH</nav>
+            <nav data-identifier="food-title" class="item-do-menu__nome">H2OH</nav>
             <nav class="item-do-menu__descricao">500 ml <br>
             </nav>
-            <nav class="item-do-menu__preco">R$ 3,00</nav>
+            <nav data-identifier="food-price" class="item-do-menu__preco">R$ 3,00</nav>
         </article>
     </div>
 
     <!-- Sobremesas -->
     <nav class="titulo-secao">Por fim, sua sobremesa</nav>
-    <div class="categoria sobremesas sobremesa__margem-inferior">
-        <article class="item-do-menu sobremesa1" onclick="selecionarSobremesa('sobremesa1')">
+    <div data-identifier="desserts" class="categoria sobremesas sobremesa__margem-inferior">
+        <article data-identifier="food-option" class="item-do-menu sobremesa1" onclick="selecionarSobremesa('sobremesa1')">
             <img src="imgs/sobremesas/bolo-prestigio.jpg" alt="bolo prestígio">
-            <nav class="item-do-menu__nome">Bolo Prestígio</nav>
+            <nav data-identifier="food-title" class="item-do-menu__nome">Bolo Prestígio</nav>
             <nav class="item-do-menu__descricao"> <br>
             </nav>
-            <nav class="item-do-menu__preco">R$ 4,60</nav>
+            <nav data-identifier="food-price" class="item-do-menu__preco">R$ 4,60</nav>
         </article>
-        <article class="item-do-menu sobremesa2" onclick="selecionarSobremesa('sobremesa2')">
+        <article data-identifier="food-option" class="item-do-menu sobremesa2" onclick="selecionarSobremesa('sobremesa2')">
             <img src="imgs/sobremesas/pudim.jpg" alt="pudim">
-            <nav class="item-do-menu__nome">Pudim</nav>
+            <nav data-identifier="food-title" class="item-do-menu__nome">Pudim</nav>
             <nav class="item-do-menu__descricao"> <br>
             </nav>
-            <nav class="item-do-menu__preco">R$ 3,90</nav>
+            <nav data-identifier="food-price" class="item-do-menu__preco">R$ 3,90</nav>
         </article>
-        <article class="item-do-menu sobremesa3" onclick="selecionarSobremesa('sobremesa3')">
+        <article data-identifier="food-option" class="item-do-menu sobremesa3" onclick="selecionarSobremesa('sobremesa3')">
             <img src="imgs/sobremesas/torta-mousse-maracuja.jpg" alt="torta mousse de maracujá">
-            <nav class="item-do-menu__nome">Torta Mousse de Maracujá</nav>
+            <nav data-identifier="food-title" class="item-do-menu__nome">Torta Mousse de Maracujá</nav>
             <nav class="item-do-menu__descricao"> <br>
             </nav>
-            <nav class="item-do-menu__preco">R$ 5,00</nav>
+            <nav data-identifier="food-price" class="item-do-menu__preco">R$ 5,00</nav>
         </article>
-        <article class="item-do-menu sobremesa4" onclick="selecionarSobremesa('sobremesa4')">
+        <article data-identifier="food-option" class="item-do-menu sobremesa4" onclick="selecionarSobremesa('sobremesa4')">
             <img src="imgs/sobremesas/sorvete-de-chocolate.jpeg" alt="sorvete de chocolate">
-            <nav class="item-do-menu__nome">Sorvete de Chocolate</nav>
+            <nav data-identifier="food-title" class="item-do-menu__nome">Sorvete de Chocolate</nav>
             <nav class="item-do-menu__descricao"> <br>
             </nav>
-            <nav class="item-do-menu__preco">R$ 3,50</nav>
+            <nav data-identifier="food-price" class="item-do-menu__preco">R$ 3,50</nav>
         </article>
     </div>
 
     <!-- Barra Inferior -->
     <footer>
-        <button class="fechar-pedido"><p>Selecione os 3 itens para fechar o pedido</p></button>
+        <button class="selecione-os-pedidos"><p>Selecione os 3 itens para fechar o pedido</p></button>
+        <button class="fechar-pedido ocultar1 ocultar2 ocultar3" onclick="mandarMensagem()"><p>Fechar pedido</p></button>
     </footer>
 
     <script src="script.js"></script>
