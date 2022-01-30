@@ -50,9 +50,28 @@ function codificarTexto(texto) {
     return textoCodificado
 }
 
-function mandarMensagem(mensagem) {
+function mandarMensagem() {
+    const itensSelecionados = document.querySelectorAll(".selecionado")
+    const nomeDoPrato = itensSelecionados[0].querySelector(".item-do-menu__nome").innerHTML
+    const nomeDaBebida = itensSelecionados[1].querySelector(".item-do-menu__nome").innerHTML
+    const nomeDaSobremesa = itensSelecionados[2].querySelector(".item-do-menu__nome").innerHTML
+
+    let precoDoPrato = itensSelecionados[0].querySelector(".item-do-menu__preco").innerHTML.replace("R$" , "")
+    precoDoPrato = precoDoPrato.replace("," , ".")
+
+    let precoDaBebida = itensSelecionados[1].querySelector(".item-do-menu__preco").innerHTML.replace("R$" , "")
+    precoDaBebida = precoDaBebida.replace("," , ".")
+
+    let precoDaSobremesa = itensSelecionados[2].querySelector(".item-do-menu__preco").innerHTML.replace("R$" , "")
+    precoDaSobremesa = precoDaSobremesa.replace("," , ".")
+
+    let valor = +precoDoPrato + +precoDaBebida + +precoDaSobremesa
+    valor = valor.toFixed(2)
+
+    let mensagem = "Olá, gostaria de fazer o pedido: \n" + "- Prato: " + nomeDoPrato + "\n" + "- Bebida: " + nomeDaBebida + "\n" + "- Sobremesa: " + nomeDaSobremesa + "\n" + "Total: R$ " + valor
+
     const numeroDeCelular = "5581979016264"
-    window.open("https://wa.me/" + numeroDeCelular + "?text=" + codificarTexto("teste"))
+    window.open("https://wa.me/" + numeroDeCelular + "?text=" + codificarTexto(mensagem))
 }
 
 
@@ -64,7 +83,7 @@ function mandarMensagem(mensagem) {
 
 
 
-/* Codigo que nao deu certo
+/* Outra maneira de selecionar os itens do cardapio
 
 const categorias = document.querySelectorAll(".categoria")
 
