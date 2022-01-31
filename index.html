@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="page-icon.svg">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="reset.css">
     <link href="https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
@@ -117,8 +118,18 @@
     <!-- Barra Inferior -->
     <footer>
         <button class="selecione-os-pedidos"><p>Selecione os 3 itens para fechar o pedido</p></button>
-        <button class="fechar-pedido ocultar1 ocultar2 ocultar3" onclick="mandarMensagem()"><p>Fechar pedido</p></button>
+        <button class="fechar-pedido ocultar1 ocultar2 ocultar3" onclick="habilitarTelaConfirmarPedido()"><p>Fechar pedido</p></button>
     </footer>
+
+    <!-- Tela Final -->
+    <div class="tela-final ocultar-tela-final">
+        <div data-identifier="confirmation-dialog" class="confirme-seu-pedido">
+            <nav>Confirme seu pedido</nav>
+            <nav class="info-do-pedido"></nav>
+            <button class="finalizar-pedido" onclick="mandarMensagem()"><p>Tudo certo, pode pedir!</p></button>
+            <button class="cancelar-pedido" onclick="cancelar()">Cancelar</button>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 

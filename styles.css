@@ -179,3 +179,87 @@ footer {
 .ocultar3 {
     display: none;
 }
+
+.tela-final {
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.confirme-seu-pedido {
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+    top: calc(50% - (353px/2));
+    left: calc(50% - (377px/2)) ;
+    width: 377px;
+    height: 353px;
+    border-radius: 9px;
+    padding: 24px;
+    padding-bottom: 0;
+    font-size: 22px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #50D074;
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.25);
+}
+.confirme-seu-pedido nav:first-child {
+    font-weight: 700;
+}
+
+.info-do-pedido {
+    width: 100%;
+    font-weight: 400;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.info-do-pedido div {
+    width: 70%;
+    margin: 10px 0;
+}
+.info-do-pedido .preco {
+    width: 30%;
+    text-align: right;
+}
+.info-do-pedido div:nth-child(7) {
+    font-weight: 700;
+}
+.info-do-pedido div:nth-child(8) {
+    font-weight: 700;
+}
+
+.finalizar-pedido {
+    position: sticky;
+    top: 15px;
+    left: calc(50% - 0);
+    width: 329px;
+    height: 52px;
+    font-size: 22px;
+    font-weight: 700;
+    color: #50D074;
+    border: none;
+    border-radius: 61px;
+    background-color: white;
+}
+
+.cancelar-pedido {
+    position: sticky;
+    top: 15px;
+    left: calc(50% - 0);
+    width: 329px;
+    height: 52px;
+    font-size: 22px;
+    color: white;
+    border: none;
+    background-color: #50D074;
+}
+
+.ocultar-tela-final {
+    display: none;
+}

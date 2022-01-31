@@ -45,6 +45,31 @@ function selecionarSobremesa(a) {
     ocultar3.classList.remove("ocultar3")
 }
 
+function habilitarTelaConfirmarPedido() {
+    const telaFinal = document.querySelector(".tela-final")
+    telaFinal.classList.remove("ocultar-tela-final")
+
+    const itensSelecionados = document.querySelectorAll(".selecionado")
+    const nomeDoPrato = itensSelecionados[0].querySelector(".item-do-menu__nome").innerHTML
+    const nomeDaBebida = itensSelecionados[1].querySelector(".item-do-menu__nome").innerHTML
+    const nomeDaSobremesa = itensSelecionados[2].querySelector(".item-do-menu__nome").innerHTML
+
+    let precoDoPrato = itensSelecionados[0].querySelector(".item-do-menu__preco").innerHTML.replace("R$" , "")
+    /* precoDoPrato = precoDoPrato.replace("," , ".") */
+
+    let precoDaBebida = itensSelecionados[1].querySelector(".item-do-menu__preco").innerHTML.replace("R$" , "")
+    /* precoDaBebida = precoDaBebida.replace("," , ".") */
+
+    let precoDaSobremesa = itensSelecionados[2].querySelector(".item-do-menu__preco").innerHTML.replace("R$" , "")
+    /* precoDaSobremesa = precoDaSobremesa.replace("," , ".") */
+
+    let valor = +precoDoPrato.replace("," , ".") + +precoDaBebida.replace("," , ".") + +precoDaSobremesa.replace("," , ".")
+    valor = valor.toFixed(2).replace("." , ",")
+
+    let infoDoPedido = document.querySelector(".info-do-pedido")
+    infoDoPedido.innerHTML = "<div>" + nomeDoPrato + "</div>" + "<div class='preco'>" + precoDoPrato + "</div>" + "<div>"  + nomeDaBebida + "</div>" + "<div class='preco'>" + precoDaBebida + "</div>" + "<div>" + nomeDaSobremesa + "</div>" + "<div class='preco'>" + precoDaSobremesa + "</div>" + "<div>" + "TOTAL" + "</div>" + "<div class='preco'>" + "R$ " + valor + "</div>"
+}
+
 function codificarTexto(texto) {
     let textoCodificado = encodeURIComponent(texto)
     return textoCodificado
@@ -77,7 +102,10 @@ function mandarMensagem() {
     window.open("https://wa.me/" + numeroDeCelular + "?text=" + codificarTexto(mensagem))
 }
 
-
+function cancelar() {
+    const telaFinal = document.querySelector(".tela-final")
+    telaFinal.classList.add("ocultar-tela-final")
+}
 
 
 
