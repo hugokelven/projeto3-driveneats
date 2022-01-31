@@ -68,7 +68,10 @@ function mandarMensagem() {
     let valor = +precoDoPrato + +precoDaBebida + +precoDaSobremesa
     valor = valor.toFixed(2)
 
-    let mensagem = "Olá, gostaria de fazer o pedido: \n" + "- Prato: " + nomeDoPrato + "\n" + "- Bebida: " + nomeDaBebida + "\n" + "- Sobremesa: " + nomeDaSobremesa + "\n" + "Total: R$ " + valor
+    const nomeDoCliente = prompt("Por favor, digite seu nome:")
+    const endereco = prompt("Por favor, digite seu endereço:")
+
+    let mensagem = "Olá, gostaria de fazer o pedido: \n" + "- Prato: " + nomeDoPrato + "\n" + "- Bebida: " + nomeDaBebida + "\n" + "- Sobremesa: " + nomeDaSobremesa + "\n" + "Total: R$ " + valor + "\n" + "\n" + "Nome: " + nomeDoCliente + "\n" + "Endereço: " + endereco
 
     const numeroDeCelular = "5581979016264"
     window.open("https://wa.me/" + numeroDeCelular + "?text=" + codificarTexto(mensagem))
